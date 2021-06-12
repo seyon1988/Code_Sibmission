@@ -1,3 +1,10 @@
+
+#Index No	–	208648J 
+#Name		–	R.Seyon 
+#Course		–	EN5500 - Computer Systems 
+#Submission	–	Analysis of a Data Processing System - 1 
+
+
 import numpy as np
 import statistics
 
