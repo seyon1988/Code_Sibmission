@@ -29,10 +29,12 @@ std_dev = statistics.stdev(marks)
 
 marks_distributions = np.zeros((10,), dtype=int)
 
+#creating an array to store grades
+grades = [' ']*len(marks)
 
-
-
-for mark in marks:
+#Below section used to find marking distributions and grades
+for i, mark in enumerate(marks):
+    #Finding marks distribution
     decade = mark//10 #Integer division to find the decade
     
     if(decade == 10):
@@ -41,6 +43,32 @@ for mark in marks:
     else:
         #lesser than 100
         marks_distributions[decade] += 1 #adding this to relevant decade
+        
+    #Find and store grades
+    if mark >=85:
+        grades[i] = 'A+'
+    elif 75 <= mark and mark<85:
+        grades[i] = 'A'
+    elif 70 <= mark and mark<75:
+        grades[i] = 'A-'
+    elif mark >=65 and mark<70:
+        grades[i] = 'B+'
+    elif 60 <= mark and mark<65:
+        grades[i] = 'B'
+    elif 55 <= mark and mark<60:
+        grades[i] = 'B-'
+    elif 50 <= mark and mark<55:
+        grades[i] = 'C+'
+    elif 45 <= mark and mark<50:
+        grades[i] = 'C'
+    elif 40 <= mark and mark<45:
+        grades[i] = 'C-'
+    elif 35 <= mark and mark<40:
+        grades[i] = 'D'
+    elif mark<35:
+        grades[i] = 'F'
+
+
 
 print("\n\nMarks of the students of a subject as follows\n")
 #Printing marks array
@@ -66,4 +94,13 @@ for i, md in enumerate(marks_distributions):
 #print line breaker
 print("\n\n")
 
+
+#printing marks and grades
+print("Grade of Each mark as follows\n")
+print("Marks\tGrade")
+for i in range(len(marks)):
+    print('{}\t{}'.format(marks[i],grades[i]))
+        
+#print line breaker
+print("\n\n\n")
 
