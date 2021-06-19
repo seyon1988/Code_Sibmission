@@ -29,5 +29,5 @@ for i , sen_reading in enumerate(sensor_readings):
         print("Average\t\t : {:.2f}".format(average))
         print("Std Dev\t\t : {:.2f}".format(std_dev))
         print("\n")
-        time.sleep(0.001)
-    time.sleep(0.001)
+        time.sleep(1)
+    time.sleep(0.01)
