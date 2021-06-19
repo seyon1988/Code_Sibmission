@@ -1,3 +1,11 @@
+#Index No	–	208648J 
+#Name		–	R.Seyon 
+#Course		–	EN5500 - Computer Systems 
+#Type		–	In Class Activity - 2 
+#Submission	–	Serial Data Processor
+
+
+
 import time
 import numpy as np
 import statistics
